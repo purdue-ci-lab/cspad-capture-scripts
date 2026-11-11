@@ -1,5 +1,5 @@
 version = 1
-revision = 5
+revision = 3
 requires-python = ">=3.13"
 
 [[package]]
@@ -140,6 +140,12 @@ wheels = [
 array = [
     { name = "numpy" },
 ]
+
+[[package]]
+name = "docopt"
+version = "0.6.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491", size = 25901, upload-time = "2014-06-16T11:18:57.406Z" }
 
 [[package]]
 name = "donfig"
@@ -681,6 +687,20 @@ wheels = [
 ]
 
 [[package]]
+name = "pycine"
+version = "0.3.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "colorama" },
+    { name = "docopt" },
+    { name = "opencv-python" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/07/327301a5884d3a04c32edd4e6e0072a1d17aadef87c1faa96cef51a87730/pycine-0.3.2-py3-none-any.whl", hash = "sha256:44d8ecc8942889fdbb90ee82a7e1fb2f86a451eb14f9080407b7973ccd20a508", size = 24214, upload-time = "2020-06-05T13:50:12.052Z" },
+]
+
+[[package]]
 name = "pyparsing"
 version = "3.3.3"
 source = { registry = "https://pypi.org/simple" }
@@ -811,7 +831,7 @@ wheels = [
 [[package]]
 name = "spadlib"
 version = "0.1.0"
-source = { git = "https://github.com/purdue-ci-lab/spadlib.git#3fd67dbd0fe5fa68e66e7fcb09214615b0ea2b0b" }
+source = { git = "https://github.com/purdue-ci-lab/spadlib.git#b9e346678cd94198f080a68ef5b989dad49bc4eb" }
 dependencies = [
     { name = "dask", extra = ["array"] },
     { name = "h5py" },
@@ -819,6 +839,7 @@ dependencies = [
     { name = "numpy" },
     { name = "opencv-python" },
     { name = "pillow" },
+    { name = "pycine" },
     { name = "scipy" },
     { name = "tqdm" },
     { name = "zarr" },
